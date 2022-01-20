@@ -13,10 +13,10 @@
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/about/</guid>
-      <description>About FANG META!
+      <description>1.About FANG META!
 FANG META! is created by FANG in Jan 18, 2022. It is mainly designed as heart tree cave serving for YOU and FANG to pour out heart respectively.
-Simultaneously, FANG META! serve as an atlas leading us toward a better future for humankind.
-About FANG
+Simultaneously, FANG META! serves as an atlas leading us toward a better future for humankind.
+2.About FANG
 FANG is now a junior undergraduate in an university sponsored by 985 Prdoject in Mainland China.
 Major in: Optoelectronic Information Science and Engineering</description>
     </item>
@@ -36,9 +36,7 @@ Major in: Optoelectronic Information Science and Engineering</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/links/</guid>
-      <description>To use this feature, add links section to frontmatter.
-This page&amp;rsquo;s frontmatter:
-links:- title:GitHubdescription:GitHub is the world&amp;#39;s largest software development platform.website:https://github.comimage:https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png- title:TypeScriptdescription:TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.website:https://www.typescriptlang.orgimage:ts-logo-128.jpgimage field accepts both local and external images.</description>
+      <description>Following are several friendly links of FANG META!</description>
     </item>
     
     <item>
@@ -48,6 +46,15 @@ links:- title:GitHubdescription:GitHub is the world&amp;#39;s largest software d
       
       <guid>https://example.com/search/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>树洞（developing）</title>
+      <link>https://example.com/%E6%A0%91%E6%B4%9Edeveloping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/%E6%A0%91%E6%B4%9Edeveloping/</guid>
+      <description>Place your words below and FANG will reply YOU through the Email address given by YOU in confidence as soon as possible!</description>
     </item>
     
   </channel>

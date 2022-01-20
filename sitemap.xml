@@ -43,5 +43,7 @@
     <loc>https://example.com/search/</loc>
   </url><url>
     <loc>https://example.com/categories/test/</loc>
+  </url><url>
+    <loc>https://example.com/%E6%A0%91%E6%B4%9Edeveloping/</loc>
   </url>
 </urlset>
