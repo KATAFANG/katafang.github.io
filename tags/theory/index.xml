@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on FANG META!</title>
-    <link>https://example.com/post/</link>
-    <description>Recent content in Posts on FANG META!</description>
+    <title>Theory on FANG META!</title>
+    <link>https://example.com/tags/theory/</link>
+    <description>Recent content in Theory on FANG META!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/theory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[Theory] Spherical Waves under Paraxial and Far-Field Conditions</title>
       <link>https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/</link>
@@ -21,20 +21,6 @@
 Figure 1 sketches the basic hypothesis of the author&amp;rsquo;s theory. In the hypothesis, Q is the source point that emits spherical waves2constantly in the universe while P is the field point in considerable distance that receive electromagnetic waves emitted by Q.
 Suppose both Q and P can be described in space rectangular coordinate system as follows.$$Q(x_0,y_0,0)\tag{1}$$$$P(x,y,z)\tag{2}$$$$\left|PQ\right|=r\tag{3}$$
 Q is the source point that emits spherical waves, which can be described as $$\vec{E}(P)=\frac{A}{\vec{r}}\exp{(\mathrm{i}k\vec{r})}\tag{4}$$ Suppose A=1 in (4) and E, r are scalar, we have$$E(P)=\frac{1}{r}\exp{(\mathrm{i}kr)}\tag{5}$$ According to the Pythagorean theorem, r can be described as $$r=\sqrt{(x-x_0)^2+(y-y_0)^2+z^2}$$$$r=z\sqrt{\frac{(x-x_0)^2+(y-y_0)^2}{z^2}+1}$$ With the help of binomial expansion, we have$$r=z (1+\frac{(x-x_0)^2+(y-y_0)^2}{2z^2}-\frac{[(x-x_0)^2+(y-y_0)^2]^2}{8z^4}+\cdots ) \tag{6}$$ Given the paraxial condition, we have$$z^2\gg [(x-x_0)^2+(y-y_0)^2]_{\max}\tag{7}$$ Given the far-field condition, we have$$k \frac{x^2+y^2}{2z} \ll \pi $$$$k \frac{x_0^2+y_0^2}{2z} \ll \pi $$i.</description>
-    </item>
-    
-    <item>
-      <title>Hello! FANG META!</title>
-      <link>https://example.com/p/hello-fang-meta/</link>
-      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/p/hello-fang-meta/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Two roads diverged in a yellow wood,&lt;br&gt;
-And sorry I could not travel both&lt;br&gt;
-I took the one less traveled by,&lt;br&gt;
-And that has made all the difference.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

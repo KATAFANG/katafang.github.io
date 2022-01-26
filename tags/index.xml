@@ -6,7 +6,25 @@
     <description>Recent content in Tags on FANG META!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Engineering Optics</title>
+      <link>https://example.com/tags/engineering-optics/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/engineering-optics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theory</title>
+      <link>https://example.com/tags/theory/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/theory/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hello! FANG META!</title>
       <link>https://example.com/tags/hello-fang-meta/</link>

@@ -6,7 +6,67 @@
         <description>Recent content on FANG META!</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Theory] Spherical Waves under Paraxial and Far-Field Conditions</title>
+        <link>https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/</link>
+        <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/</guid>
+        <description>&lt;img src="https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/head.png" alt="Featured image of post [Theory] Spherical Waves under Paraxial and Far-Field Conditions" /&gt;&lt;blockquote&gt;
+&lt;p&gt;仰观宇宙之大&lt;br&gt;
+俯察品类之盛&lt;br&gt;
+所以游目骋怀&lt;br&gt;
+足以极视听之娱&lt;br&gt;
+信可乐也&lt;!-- raw HTML omitted --&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure 
+	
+		class=&#34;gallery-image&#34; 
+		style=&#34;
+			flex-grow: 184; 
+			flex-basis: 443px&#34;
+	&gt;
+	&lt;a href=&#34;https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/sketch.png&#34; data-size=&#34;1021x553&#34;&gt;
+		&lt;img src=&#34;https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/sketch.png&#34;
+			width=&#34;1021&#34;
+			height=&#34;553&#34;
+			srcset=&#34;https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/sketch_hu87d9b42ce87f42ffba1bf422d856b69f_72944_480x0_resize_box_3.png 480w, https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/sketch_hu87d9b42ce87f42ffba1bf422d856b69f_72944_1024x0_resize_box_3.png 1024w&#34;
+			loading=&#34;lazy&#34;
+			alt=&#34;Figure 1&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Figure 1&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Figure 1 sketches the basic hypothesis of the author&amp;rsquo;s theory. In the hypothesis, &lt;em&gt;Q&lt;/em&gt; is the source point that emits &lt;!-- raw HTML omitted --&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;spherical waves&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;!-- raw HTML omitted --&gt; constantly in the universe while &lt;em&gt;P&lt;/em&gt; is the field point in considerable distance that receive electromagnetic waves emitted by &lt;em&gt;Q&lt;/em&gt;.&lt;br&gt;
+Suppose both &lt;em&gt;Q&lt;/em&gt; and &lt;em&gt;P&lt;/em&gt; can be described in space rectangular coordinate system as follows.$$Q(x_0,y_0,0)\tag{1}$$$$P(x,y,z)\tag{2}$$$$\left|PQ\right|=r\tag{3}$$&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Q&lt;/em&gt; is the source point that emits spherical waves, which can be described as $$\vec{E}(P)=\frac{A}{\vec{r}}\exp{(\mathrm{i}k\vec{r})}\tag{4}$$
+Suppose &lt;em&gt;A&lt;/em&gt;=1 in (4) and &lt;em&gt;E&lt;/em&gt;, &lt;em&gt;r&lt;/em&gt; are scalar, we have$$E(P)=\frac{1}{r}\exp{(\mathrm{i}kr)}\tag{5}$$
+According to the Pythagorean theorem, &lt;em&gt;r&lt;/em&gt; can be described as $$r=\sqrt{(x-x_0)^2+(y-y_0)^2+z^2}$$$$r=z\sqrt{\frac{(x-x_0)^2+(y-y_0)^2}{z^2}+1}$$
+With the help of binomial expansion, we have$$r=z (1+\frac{(x-x_0)^2+(y-y_0)^2}{2z^2}-\frac{[(x-x_0)^2+(y-y_0)^2]^2}{8z^4}+\cdots ) \tag{6}$$
+Given the paraxial condition, we have$$z^2\gg [(x-x_0)^2+(y-y_0)^2]_{\max}\tag{7}$$
+Given the far-field condition, we have$$k \frac{x^2+y^2}{2z} \ll \pi $$$$k \frac{x_0^2+y_0^2}{2z} \ll \pi $$i.e.$$\frac{x^2+y^2}{2z}\ll \frac{\lambda}{2}\tag{8}$$$$\frac{x_0^2+y_0^2}{2z}\ll \frac{\lambda}{2}\tag{9}$$
+2 parts in (5) with different colours are displayed below.$$E(P)=\frac{1}{\color{pink}r}\exp(\mathrm{i}k{\color{lightblue}r})$$
+In that the wave number &lt;em&gt;k&lt;/em&gt; of red light is large, we take zero order approximation to the pink part and first order approximation to the lightblue part. And (9) is also the result of paraxial condition. $$E(P)=\frac{1}{\color{pink}z}\exp \mathrm{i}k\left[ {\color{lightblue}z+\frac{(x-x_0)^2+(y-y_0)^2}{2z}} \right] \tag{10}$$
+In view of$$xx_0\ll z\tag{11}$$$$yy_0\ll z\tag{12}$$
+we can derive (13) from (8), (9), (11) and (12).$$E(P)=\frac{1}{z}\exp (\mathrm{i}kz)\tag{13}$$
+Above expression (13) of spherical waves in &lt;em&gt;Q&lt;/em&gt; is the form of plane wave.
+We come to the conclusion that &lt;strong&gt;spherical waves under paraxial and far-field conditions can be approximately regarded as plane wave.&lt;/strong&gt;&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;The above quote is excerpted from Xizhi Wang&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://so.gushiwen.cn/shangxi_2334.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Preface to the Orchid Pavilion Collection&lt;/a&gt; in A.D.353.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;Spherical waves&lt;/a&gt; are essentially electromagnetic waves in the context above.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+        </item>
+        <item>
         <title>Hello! FANG META!</title>
         <link>https://example.com/p/hello-fang-meta/</link>
         <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
