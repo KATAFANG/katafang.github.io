@@ -13,14 +13,7 @@
       <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/</guid>
-      <description>仰观宇宙之大
-俯察品类之盛
-所以游目骋怀
-足以极视听之娱
-信可乐也1 Figure 1
-Figure 1 sketches the basic hypothesis of the author&amp;rsquo;s theory. In the hypothesis, Q is the source point that emits spherical waves2constantly in the universe while P is the field point in considerable distance that receive electromagnetic waves emitted by Q.
-Suppose both Q and P can be described in space rectangular coordinate system as follows.$$Q(x_0,y_0,0)\tag{1}$$$$P(x,y,z)\tag{2}$$$$\left|PQ\right|=r\tag{3}$$
-Q is the source point that emits spherical waves, which can be described as $$\vec{E}(P)=\frac{A}{\vec{r}}\exp{(\mathrm{i}k\vec{r})}\tag{4}$$ Suppose A=1 in (4) and E, r are scalar, we have$$E(P)=\frac{1}{r}\exp{(\mathrm{i}kr)}\tag{5}$$ According to the Pythagorean theorem, r can be described as $$r=\sqrt{(x-x_0)^2+(y-y_0)^2+z^2}$$$$r=z\sqrt{\frac{(x-x_0)^2+(y-y_0)^2}{z^2}+1}$$ With the help of binomial expansion, we have$$r=z (1+\frac{(x-x_0)^2+(y-y_0)^2}{2z^2}-\frac{[(x-x_0)^2+(y-y_0)^2]^2}{8z^4}+\cdots ) \tag{6}$$ Given the paraxial condition, we have$$z^2\gg [(x-x_0)^2+(y-y_0)^2]_{\max}\tag{7}$$ Given the far-field condition, we have$$k \frac{x^2+y^2}{2z} \ll \pi $$$$k \frac{x_0^2+y_0^2}{2z} \ll \pi $$i.</description>
+      <description>仰观宇宙之大 俯察品类之盛 所以游目骋怀 足以极视听之娱 信可乐也1 Figure 1 Figure 1 sketches the basic hypothesis of the author&amp;rsquo;s theory. In the hypothesis, Q is the source point that emits spherical waves2constantly in the universe while P is the field point in considerable distance that receive electromagnetic waves</description>
     </item>
     
   </channel>
