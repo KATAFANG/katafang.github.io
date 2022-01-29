@@ -334,31 +334,45 @@ And that has made all the difference.<sup id="fnref:1"><a href="#fn:1" class="fo
      
     
         
-    <div id="remark42"></div>
-<script>
-    var remark_config = {
-        host: "https:\/\/katafang.github.io\/",
-        site_id: 'github',
-        components: ['embed'],
-        url: "https:\/\/example.com\/p\/hello-fang-meta\/",
-        max_shown_comments:  15 ,
-        theme: document.documentElement.dataset.scheme,
-        page_title: 'Hello! FANG META!',
-        locale: 'en',
-        show_email_subscription:  true 
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
     };
-
-    (function (c) {
-        for (var i = 0; i < c.length; i++) {
-            var d = document, s = d.createElement('script');
-            s.src = remark_config.host + '/web/' + c[i] + '.js';
-            s.defer = true;
-            (d.head || d.body).appendChild(s);
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
         }
-    })(remark_config.components || ['embed']);
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
 
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
     window.addEventListener('onColorSchemeChange', (e) => {
-        window.REMARK42.changeTheme(e.detail);
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
     })
 </script>
 
