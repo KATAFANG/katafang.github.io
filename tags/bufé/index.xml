@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bufé on FANG META!</title>
+    <link>https://example.com/tags/buf%C3%A9/</link>
+    <description>Recent content in bufé on FANG META!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/buf%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[bufé] COMAP——Tips before You Embark</title>
+      <link>https://example.com/p/buf%C3%A9-comaptips-before-you-embark/</link>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/buf%C3%A9-comaptips-before-you-embark/</guid>
+      <description>What is COMAP? View official site of COMAP 提到量子力学，很多人的第一反应是微观、不连续、不确定，然后就是玄乎、奇怪、诡异，乃至恐怖。 有这样的想法并不奇怪，毕竟，它跟经</description>
+    </item>
+    
+  </channel>
+</rss>
