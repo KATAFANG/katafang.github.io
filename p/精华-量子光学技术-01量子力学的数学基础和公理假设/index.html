@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='人不光是靠他生来就拥有一切，而是靠他从学习中所得到的一切来造就自己。'><title>【精华】 量子光学技术 01——量子力学的数学基础和公理假设</title>
+
+<link rel='canonical' href='https://example.com/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='【精华】 量子光学技术 01——量子力学的数学基础和公理假设'>
+<meta property='og:description' content='人不光是靠他生来就拥有一切，而是靠他从学习中所得到的一切来造就自己。'>
+<meta property='og:url' content='https://example.com/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/'>
+<meta property='og:site_name' content='FANG META!'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='QuantumOptics' /><meta property='article:tag' content='Theory' /><meta property='article:published_time' content='2023-01-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-01-07T00:00:00&#43;00:00'/><meta property='og:image' content='https://example.com/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/head.jpg' />
+<meta name="twitter:title" content="【精华】 量子光学技术 01——量子力学的数学基础和公理假设">
+<meta name="twitter:description" content="人不光是靠他生来就拥有一切，而是靠他从学习中所得到的一切来造就自己。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://example.com/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/head.jpg' />
+    <link rel="shortcut icon" href="img/icon.png" />
+<style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script>
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+		
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/">
+                <img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/head_hu02ce3079594fa2bc6ebf3db53d4fd387_333403_800x0_resize_q75_box.jpg"
+                        srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/head_hu02ce3079594fa2bc6ebf3db53d4fd387_333403_800x0_resize_q75_box.jpg 800w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/head_hu02ce3079594fa2bc6ebf3db53d4fd387_333403_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="331" 
+                        loading="lazy"
+                        alt="Featured image of post 【精华】 量子光学技术 01——量子力学的数学基础和公理假设" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E4%B8%AD%E6%96%87/" >
+                中文
+            </a>
+        
+            <a href="/categories/science/" >
+                Science
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/">【精华】 量子光学技术 01——量子力学的数学基础和公理假设</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        人不光是靠他生来就拥有一切，而是靠他从学习中所得到的一切来造就自己。
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 07, 2023</time>
+            </div>
+        
+
+        
+			<div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+			
+			<div>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notes" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="5" y="3" width="14" height="18" rx="2" />
+  <line x1="9" y1="7" x2="15" y2="7" />
+  <line x1="9" y1="11" x2="15" y2="11" />
+  <line x1="9" y1="15" x2="13" y2="15" />
+</svg>
+				<time class="article-time--reading">
+					3079
+					words & characters
+				</time>
+			</div>
+          
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p>一篇我也看不懂的长文。<br>
+观前提示：<!-- raw HTML omitted --><a class="link" href="https://mp.weixin.qq.com/s/lR9diCw_V8bt01yoPzmT2w"  target="_blank" rel="noopener"
+    >阅读原文请戳我</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><!-- raw HTML omitted --></p>
+</blockquote>
+<p>$$A_{m,n} = 
+\begin{pmatrix}
+a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,n} \  <br>
+a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,n} \  <br>
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots    \
+a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,n} 
+\end{pmatrix}$$</p>
+<h1 id="量子光学技术-01量子力学的数学基础和公理假设">量子光学技术 01——量子力学的数学基础和公理假设</h1>
+<p>🖊 人不光是靠他生来就拥有一切，而是靠他从学习中所得到的一切来造就自己。 —— 歌德</p>
+<h2 id="相关课程资料">相关课程资料：</h2>
+<p>鼠标放置在正文左侧，点击“<!-- raw HTML omitted -->+<!-- raw HTML omitted -->”工具栏中的“<!-- raw HTML omitted -->高亮块<!-- raw HTML omitted -->”来插入高亮块。</p>
+<p>科目：量子光学技术</p>
+<p>日期：</p>
+<p>主题：第二章 量子力学的数学基础和公理假设</p>
+<p>课前阅读： @ 插入相关文档</p>
+<h2 id="课堂重点">课堂重点</h2>
+<h3 id="21-量子力学理论的数学基础">2.1 量子力学理论的数学基础</h3>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->n 维希尔伯特空间<!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p>右矢：
+$$
+|\psi\rangle=\left(\begin{array}{c}
+a_{1} \
+a_{2} \
+\vdots \
+a_{n}
+\end{array}\right)
+$$</p>
+<p>；左矢：
+$$
+\langle\psi|=\left(\begin{array}{c}
+a_{1}^{<em>} &amp;
+a_{2}^{</em>} &amp;
+\cdots &amp;
+a_{n}^{*}
+\end{array}\right)
+$$</p>
+<ul>
+<li>
+<p>加法、数乘</p>
+</li>
+<li>
+<p>矢量长度
+$$
+r$$：
+$$</p>
+<p>\langle\psi \mid \psi\rangle=|a_{1}|^{2}+|a_{2}|^{2}+\cdots+|a_{n}|^{2}=r^{2}$$</p>
+</li>
+<li>
+<p>内积的次序：
+$$
+\left\langle\psi_{2} \mid \psi_{1}\right\rangle=\left\langle\psi_{1} \mid \psi_{2}\right\rangle^{*}
+$$</p>
+</li>
+</ul>
+</li>
+<li>
+<p>基矢：
+$$
+\left|e_{1}\right\rangle=\left(\begin{array}{c}
+1 \
+0 \
+\vdots \
+0
+\end{array}\right), \ \left|e_{2}\right\rangle=\left(\begin{array}{c}
+0 \
+1 \
+\vdots \
+0
+\end{array}\right), \ \cdots, \ \left|e_{n}\right\rangle=\left(\begin{array}{c}
+0 \
+\vdots \
+0 \
+1
+\end{array}\right)
+$$</p>
+<ul>
+<li>
+<p>正交归一性：
+$$
+\left\langle e_{j} \mid e_{k}\right\rangle=\delta_{jk}\quad(\delta_{jk}=0(j\ne k),\ \delta_{jk}=1(j=k))
+$$</p>
+</li>
+<li>
+<p>完备性：
+$$
+\forall|\phi\rangle,\ |\phi\rangle=\sum_{j=1}^{n} a_{j}\left|e_{j}\right\rangle\quad(a_{j}=\left\langle e_{j} \mid \phi\right\rangle)
+$$</p>
+<p>；
+$$
+\langle\phi|=\sum_{j=1}^{n} a_{j}^{*}\left\langle e_{j}\right|
+$$</p>
+</li>
+<li>
+<p>内积：
+$$
+\langle\phi \mid \psi\rangle=\left(\sum_{j=1}^{n} a_{j}^{<em>}\left\langle e_{j}\right|\right)\left(\sum_{k=1}^{n} b_{k}\left|e_{k}\right\rangle\right)=\sum_{i=1}^{n} a_{i}^{</em>} b_{i}
+$$</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->矩阵<!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p>线性变换：斜切、镜像、非等比例缩放、等比例缩放、选择旋转</p>
+</li>
+<li>
+<p>加法、数乘、转置、加法分配律交换律、乘法分配律结合律（无交换律）</p>
+</li>
+<li>
+<p>本征值、本征向量</p>
+<ul>
+<li>属于不同本征值的本征向量相互正交</li>
+</ul>
+</li>
+<li>
+<p>迹</p>
+<ul>
+<li>$$
+\operatorname{tr}(\mathbf{A}+\mathbf{B})=\operatorname{tr}(\mathbf{A})+\operatorname{tr}(\mathbf{B})$$；$$\operatorname{tr}(r \cdot \mathbf{A})=r \cdot \operatorname{tr}(\mathbf{A})
+$$</li>
+<li>轮换性：
+$$
+\operatorname{tr}(\mathbf{A_1A_2\cdots A_n})=\operatorname{tr}(\mathbf{A_2\cdots A_nA_1})=\operatorname{tr}(\mathbf{A_nA_1\cdots A_{n-1}})
+$$</li>
+<li>相似变换不改变迹：
+$$
+\mathbf{B}=\mathbf{P A P}^{-1} \quad \operatorname{tr}(\mathbf{B})=\operatorname{tr}\left(\mathbf{P A} \mathbf{P}^{-1}\right)=\operatorname{tr}\left(\mathbf{P}^{-1} \mathbf{P A}\right)=\operatorname{tr}(\mathbf{A})
+$$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->厄米伴随<!-- raw HTML omitted --></p>
+<ul>
+<li>$$
+A|\alpha\rangle=|\beta\rangle=\lambda|\alpha\rangle\Leftrightarrow\langle\alpha| A^{\dagger}=\langle\beta|=\lambda^*\langle\alpha|
+$$</li>
+<li>$$
+A^{\dagger}=\left(\begin{array}{ll}
+$$</li>
+</ul>
+</li>
+</ul>
+<p>A_{11}^{<em>} &amp; A_{21}^{</em>} \
+A_{12}^{<em>} &amp; A_{12}^{</em>}
+\end{array}\right)=\left(A^{T}\right)^{*}$$</p>
+<pre tabindex="0"><code>- 性质：$$\begin{aligned}
+</code></pre><p>\left(A^{\dagger}\right)^{\dagger} &amp;=A &amp;(A+B)^{\dagger} &amp;=A^{\dagger}+B^{\dagger} \
+(A B)^{\dagger} &amp;=B^{\dagger} A^{\dagger} &amp;(a A)^{\dagger} &amp;=a^{*} A^{\dagger}
+\end{aligned}$$</p>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->厄米矩阵：<!-- raw HTML omitted -->
+$$
+A^{\dagger}=A
+$$</p>
+<ul>
+<li>$$
+a_{ii}\in \mathbb{R}$$；$$a_{i j}=a_{j i}^{*}
+$$</li>
+<li>本征值为实数：
+$$
+\lambda^{<em>}\langle\alpha \mid \alpha\rangle=\left(\langle\alpha| A^{\dagger}\right)|\alpha\rangle=\langle\alpha|A| \alpha\rangle=\lambda\langle\alpha \mid \alpha\rangle  \Rightarrow \lambda^{</em>}=\lambda
+$$</li>
+<li>不同本征值的本征矢量相互正交：
+$$
+\left.\begin{array}{rl}A\left|\alpha^{\prime}\right\rangle &amp; =\lambda^{\prime}\left|\alpha^{\prime}\right\rangle \text { 两边左乘 }\left\langle\alpha^{\prime \prime}\right| \ \left\langle\alpha^{\prime \prime}\right| A &amp; =\lambda^{\prime \prime}\left\langle\alpha^{\prime \prime}\right| \text { 两边右乘 }\left|\alpha^{\prime}\right\rangle\end{array}\right} 
+相减  \Rightarrow\left(\lambda^{\prime}-\lambda^{\prime \prime }\right)\left\langle\alpha^{\prime \prime} \mid \alpha^{\prime}\right\rangle=0 
+$$</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->幺正矩阵（酉矩阵）：<!-- raw HTML omitted -->
+$$
+U^{\dagger} U=U U^{\dagger}=I
+$$</p>
+<ul>
+<li>
+<p>幺正变换不改变向量的内积，从而也不改变向量的长度：
+$$
+\forall |\psi\rangle,|\varphi\rangle ,\quad \langle U \psi \mid U \varphi\rangle=\langle\psi \mid \varphi\rangle
+$$</p>
+</li>
+<li>
+<p>若
+$$
+\left{\left|\mu_{i}\right\rangle\right}
+$$</p>
+<p>是空间的一组基矢，则
+$$
+\left{U\left|\mu_{i}\right\rangle\right}
+$$</p>
+<p>也是空间的一组基矢</p>
+</li>
+<li>
+<p>若
+$$
+\left{\left|\mu_{i}\right\rangle\right}
+$$</p>
+<p>和
+$$
+\left{\left|\kappa_{i}\right\rangle\right}
+$$</p>
+<p>是同一空间的两组基矢，则两者必能由一个幺正矩阵联系起来，即
+$$
+\exists U, \ \mathrm{ s.t. }\left{\left|\kappa_i\right\rangle\right}=\left{\left|U\mu_i\right\rangle\right}
+$$</p>
+<p>，证明略</p>
+</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->投影矩阵：<!-- raw HTML omitted -->
+$$
+P=|a\rangle\langle a|
+$$</p>
+<ul>
+<li>完备性：一组完备基矢的投影矩阵之和为单位矩阵
+$$
+|\alpha\rangle=\sum_{i}\left\langle a_{i} \mid \alpha\right\rangle\left|a_{i}\right\rangle=\sum_{i}\left|a_{i}\right\rangle\left\langle a_{i} \mid \alpha\right\rangle=\left(\sum_{i} P_{i}\right)|\alpha\rangle
+$$</li>
+</ul>
+</li>
+<li>
+<p>直积空间（了解）</p>
+<ul>
+<li>
+<p>两个希尔伯特空间
+$$
+V_1
+$$</p>
+<p>（m 维，
+$$
+|\phi\rangle
+$$</p>
+<p>）和
+$$
+V_2
+$$</p>
+<p>（n 维，
+$$
+|\varphi\rangle
+$$</p>
+<p>） ，可构成一个新的希尔伯特空间
+$$
+V$$（m*n维，
+$$</p>
+<p>|\psi\rangle$$）</p>
+</li>
+<li>
+<p>空间
+$$
+V$$中的向量总可写成
+$$</p>
+<p>V_1
+$$
+和
+$$</p>
+<p>V_2
+$$
+中向量的直积或多个直积的线性叠加：
+$$</p>
+<p>|\psi\rangle=\sum_{i}c_i|\phi_i\rangle \otimes|\varphi_i\rangle$$</p>
+</li>
+<li>
+<p>向量的直积：
+$$
+|\alpha\rangle \otimes|\psi\rangle=\left(\begin{array}{c}
+\alpha_{1} \
+\alpha_{2}
+\end{array}\right) \otimes\left(\begin{array}{l}
+\psi_{1} \
+\psi_{2} \
+\psi_{3}
+\end{array}\right)=\left(\begin{array}{c}
+\alpha_{1} \psi_{1} \
+\alpha_{1} \psi_{2} \
+\alpha_{1} \psi_{3} \
+\alpha_{2} \psi_{1} \
+\alpha_{2} \psi_{2} \
+\alpha_{2} \psi_{3}
+\end{array}\right)
+$$</p>
+</li>
+<li>
+<p>矩阵的直积：
+$$
+\begin{aligned}
+A \otimes L &amp;=\left(\begin{array}{lll}
+A_{11} &amp; A_{12} \
+A_{21} &amp; A_{22}
+\end{array}\right) \otimes\left(\begin{array}{lll}
+L_{11} &amp; I_{12} &amp; I_{13} \
+L_{21} &amp; L_{22} &amp; L_{23} \
+L_{31} &amp; L_{32} &amp; L_{33}
+\end{array}\right) \
+&amp;=\left(\begin{array}{llllll}
+A_{11} L_{11} &amp; A_{11} L_{12} &amp; A_{11} L_{13} &amp; A_{12} L_{11} &amp; A_{12} L_{12} &amp; A_{12} L_{13} \
+A_{11} L_{21} &amp; A_{11} L_{22} &amp; A_{11} L_{23} &amp; A_{12} L_{21} &amp; A_{12} L_{22} &amp; A_{12} L_{23} \
+A_{11} L_{31} &amp; A_{11} L_{32} &amp; A_{11} L_{33} &amp; A_{12} L_{31} &amp; A_{12} L_{32} &amp; A_{12} L_{33} \
+A_{21} L_{11} &amp; A_{12} L_{12} &amp; A_{12} L_{13} &amp; A_{22} L_{11} &amp; A_{22} L_{12} &amp; A_{22} L_{13} \
+A_{21} L_{21} &amp; A_{21} L_{22} &amp; A_{21} L_{23} &amp; A_{22} L_{21} &amp; A_{22} L_{22} &amp; A_{22} L_{23} \
+A_{21} L_{31} &amp; A_{21} L_{32} &amp; A_{21} L_{33} &amp; A_{22} L_{31} &amp; A_{22} L_{32} &amp; A_{22} L_{33}
+\end{array}\right)
+\end{aligned}
+$$</p>
+</li>
+<li>
+<p>运算规则：</p>
+<ul>
+<li>$$
+\left(\left|\phi_{1}\right\rangle+\left|\phi_{2}\right\rangle\right) \otimes\left(\left|\varphi_{1}\right\rangle+\left|\varphi_{2}\right\rangle\right)=\left|\phi_{1}\right\rangle \otimes\left|\varphi_{1}\right\rangle+\left|\phi_{1}\right\rangle \otimes\left|\varphi_{2}\right\rangle+\left|\phi_{2}\right\rangle \otimes\left|\varphi_{1}\right\rangle+\left|\phi_{2}\right\rangle \otimes\left|\varphi_{2}\right\rangle
+$$</li>
+<li>$$
+|\phi\rangle \otimes|\varphi\rangle \neq|\varphi\rangle \otimes|\phi\rangle
+$$</li>
+<li>$$
+c|\phi\rangle \otimes|\varphi\rangle=|\phi\rangle \otimes c|\varphi\rangle
+$$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="22-施特恩-格拉赫strong实验strong">2.2 施特恩-格拉赫<!-- raw HTML omitted -->实验<!-- raw HTML omitted --></h3>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->银原子的磁矩<!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p>银原子的磁矩来源于第 47 个电子的自旋，所以具有两个分立的取值
+$$
+\pm \frac{\hbar }{2} 
+$$</p>
+<p>，因此在 S-G 实验中，银原子通过非均匀磁场后，观察屏仅有两个斑点</p>
+</li>
+</ul>
+</li>
+<li>
+<p><!-- raw HTML omitted -->实验 1：连续两个 SGz 测量<!-- raw HTML omitted --></p>
+</li>
+</ul>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 289; 
+			flex-basis: 694px"
+	>
+	<a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnb0DYkgIpX0xSwRd96VSWqc.png" data-size="686x237">
+		<img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnb0DYkgIpX0xSwRd96VSWqc.png"
+			width="686"
+			height="237"
+			srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnb0DYkgIpX0xSwRd96VSWqc_hu6f93039b545757591c0afe3bceef510a_45652_480x0_resize_box_3.png 480w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnb0DYkgIpX0xSwRd96VSWqc_hu6f93039b545757591c0afe3bceef510a_45652_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->实验 2：SGz 测量 + SGx 测量<!-- raw HTML omitted --></p>
+<ul>
+<li>$$
+|x+\rangle$$态和$$|x-\rangle$$态的粒子数量各50%
+$$</li>
+</ul>
+</li>
+</ul>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 243; 
+			flex-basis: 583px"
+	>
+	<a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnKDJw3jpZTPL5FmdFuSijbh.png" data-size="652x268">
+		<img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnKDJw3jpZTPL5FmdFuSijbh.png"
+			width="652"
+			height="268"
+			srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnKDJw3jpZTPL5FmdFuSijbh_hu55a746048269e574f1717bc621c32b3e_41903_480x0_resize_box_3.png 480w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnKDJw3jpZTPL5FmdFuSijbh_hu55a746048269e574f1717bc621c32b3e_41903_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->实验 3：SGz 测量 + SGx 测量 + SGz 测量<!-- raw HTML omitted --></p>
+<ul>
+<li>$$
+|z+\rangle$$态和$$|z-\rangle$$态均有，粒子数量各50%
+$$</li>
+<li>$$
+x$$方向的测量改变了原始$$|z+\rangle$$态
+$$</li>
+</ul>
+</li>
+</ul>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 293; 
+			flex-basis: 704px"
+	>
+	<a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnEVz6nHiTD2buNCT4MpH2bg.png" data-size="807x275">
+		<img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnEVz6nHiTD2buNCT4MpH2bg.png"
+			width="807"
+			height="275"
+			srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnEVz6nHiTD2buNCT4MpH2bg_hu41720730734dcbb94adfeb5799a74446_65409_480x0_resize_box_3.png 480w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnEVz6nHiTD2buNCT4MpH2bg_hu41720730734dcbb94adfeb5799a74446_65409_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->实验 4：SGz 测量 + SGx 过滤器 + SGz 测量<!-- raw HTML omitted --></p>
+<ul>
+<li>
+<p>对 x 轴向的测量改变了原始
+$$
+|z+\rangle
+$$</p>
+<p>态，抹去了原始态的信息</p>
+</li>
+<li>
+<p>即使使用单个粒子进行实验，结果也相同</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 538; 
+			flex-basis: 1292px"
+	>
+	<a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnRefIckSNfrnjKtbuffRxqh.png" data-size="754x140">
+		<img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnRefIckSNfrnjKtbuffRxqh.png"
+			width="754"
+			height="140"
+			srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnRefIckSNfrnjKtbuffRxqh_hub6dd4eddb847d98703833d3e8c79a179_23228_480x0_resize_box_3.png 480w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnRefIckSNfrnjKtbuffRxqh_hub6dd4eddb847d98703833d3e8c79a179_23228_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 546; 
+			flex-basis: 1311px"
+	>
+	<a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcn5X4xZ8jvCFhBPWOaIfMYff.png" data-size="754x138">
+		<img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcn5X4xZ8jvCFhBPWOaIfMYff.png"
+			width="754"
+			height="138"
+			srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcn5X4xZ8jvCFhBPWOaIfMYff_hu00fd1a9b14e65809409c3741144f75e1_23626_480x0_resize_box_3.png 480w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcn5X4xZ8jvCFhBPWOaIfMYff_hu00fd1a9b14e65809409c3741144f75e1_23626_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<ul>
+<li><!-- raw HTML omitted -->实验 5：SGx 测量 + SGy 测量<!-- raw HTML omitted --></li>
+</ul>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 429; 
+			flex-basis: 1031px"
+	>
+	<a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcn84rL9QzyR0iPu4T3FhXuFf.png" data-size="533x124">
+		<img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcn84rL9QzyR0iPu4T3FhXuFf.png"
+			width="533"
+			height="124"
+			srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcn84rL9QzyR0iPu4T3FhXuFf_hu668a7916b24e6b8a95ff33ed0940f797_10660_480x0_resize_box_3.png 480w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcn84rL9QzyR0iPu4T3FhXuFf_hu668a7916b24e6b8a95ff33ed0940f797_10660_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->总结<!-- raw HTML omitted --></p>
+<ul>
+<li>$$
+|z+\rangle=\left(\begin{array}{l}
+$$</li>
+</ul>
+</li>
+</ul>
+<p>1 \
+0
+\end{array}\right)
+$$
+；
+$$</p>
+<p>|z-\rangle=\left(\begin{array}{l}
+0 \
+1
+\end{array}\right)
+$$
+；
+$$</p>
+<p>|x\pm\rangle=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+1 \
+\pm1
+\end{array}\right)
+$$
+；
+$$</p>
+<p>|y\pm\rangle=\frac{1}{\sqrt{2}}\left(\begin{array}{c}
+1 \
+\pm i
+\end{array}\right)$$</p>
+<ul>
+<li>$$
+\left{\begin{matrix}
+$$</li>
+</ul>
+<p>|z+\rangle=\frac{1}{\sqrt{2}}|x+\rangle+\frac{1}{\sqrt{2}}|x-\rangle \
+|z-\rangle=\frac{1}{\sqrt{2}}|x+\rangle-\frac{1}{\sqrt{2}}|x-\rangle
+\end{matrix}\right. 
+$$
+；
+$$</p>
+<p>\left{\begin{matrix}
+|x+\rangle=\frac{1}{\sqrt{2}}|z+\rangle+\frac{1}{\sqrt{2}}|z-\rangle \
+|x-\rangle=\frac{1}{\sqrt{2}}|z+\rangle-\frac{1}{\sqrt{2}}|z-\rangle
+\end{matrix}\right. 
+$$
+；
+$$</p>
+<p>\left{\begin{matrix}
+|y+\rangle=\frac{1}{\sqrt{2}}|z+\rangle+\frac{i}{\sqrt{2}}|z-\rangle \
+|y-\rangle=\frac{1}{\sqrt{2}}|z+\rangle-\frac{i}{\sqrt{2}}|z-\rangle
+\end{matrix}\right. $$</p>
+<ul>
+<li>
+<p>描述 y 轴状态需要运用复数</p>
+</li>
+<li>
+<p>描述原子自旋态需要一个二维的希尔伯特空间</p>
+</li>
+<li>
+<p>启示</p>
+<ul>
+<li>实验证实了粒子自旋角动量可能的取值是分立的，即是量子化的；实验结果只能用量子力学来解释</li>
+<li>对量子态的描述需要借助希尔伯特空间，量子态可视为希尔伯特空间的一个向量</li>
+<li>对量子态的测量会改变原始量子态</li>
+</ul>
+</li>
+</ul>
+<h3 id="23-量子力学的公理假设">2.3 量子力学的公理假设</h3>
+<ul>
+<li>
+<p>公理 1：一个物理系统的状态由一个<!-- raw HTML omitted -->归一化<!-- raw HTML omitted -->的矢量
+$$
+|\psi\rangle
+$$</p>
+<p>来描述，这些矢量所构成的希尔伯特空间包括了这个系统所有可能的状态</p>
+</li>
+<li>
+<p>公理 2：量子力学中的可观测物理量由厄米算符表示，数学上由厄米矩阵表达</p>
+<ul>
+<li>自旋算符与泡利矩阵：
+$$
+\hat{S}<em>{j}=\frac{\hbar}{2} \hat{\sigma}</em>{j}\left{\begin{array}{l}
+\hat{\sigma}<em>{x}=\left(\begin{array}{cc}
+0 &amp; 1 \
+1 &amp; 0
+\end{array}\right) \
+\hat{\sigma}</em>{y}=\left(\begin{array}{cc}
+0 &amp; -i \
+i &amp; 0
+\end{array}\right) \
+\hat{\sigma}_{z}=\left(\begin{array}{cc}
+1 &amp; 0 \
+0 &amp; -1
+\end{array}\right)
+\end{array}\right.
+$$</li>
+</ul>
+</li>
+<li>
+<p>公理 3：对物理量
+$$
+A$$的测量结果只能是对应的厄米算符
+$$</p>
+<p>\widehat{A}$$ 的本征值之一</p>
+</li>
+<li>
+<p>公理 4：任何一个量子态都可表示成可测量物理量
+$$
+A$$的本征态的线性叠加：
+$$</p>
+<p>|\psi\rangle=\sum_{i} c_{i}\left|a_{i}\right\rangle
+$$
+；测量物理量
+$$</p>
+<p>A
+$$
+，结果为本征值
+$$</p>
+<p>a_i
+$$
+的几率为：
+$$</p>
+<p>P\left(a_{i}\right)=\left|c_{i}\right|^{2}=\left|\left\langle a_{i} \mid \psi\right\rangle\right|^{2}$$</p>
+</li>
+<li>
+<p>公理 5：对于量子态
+$$
+|\psi\rangle
+$$</p>
+<p>，若对物理量
+$$
+A$$的测量结果为本征值
+$$</p>
+<p>a_i
+$$
+，那么测量后原来的量子态就从
+$$</p>
+<p>|\psi\rangle
+$$
+瞬间塌缩到本征值
+$$</p>
+<p>a_i
+$$
+对应的本征态
+$$</p>
+<p>|a_i\rangle
+$$
+，
+$$</p>
+<p>测量结果若为  a_{i}  ： |\psi\rangle \stackrel{\widehat{A}}{\longrightarrow}\left|a_{i}\right\rangle $$</p>
+</li>
+<li>
+<p>公理的应用——自旋 1/2 系统</p>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->厄米算符可由其本征值和本征向量唯一确定：<!-- raw HTML omitted -->
+$$
+\hat{A} =\hat{A} \sum_{i} \hat{P}<em>{i} 
+=\hat{A} \sum</em>{i}\left|a_{i}\right\rangle\left\langle a_{i}\right| 
+=\sum_{i} a_{i}\left|a_{i}\right\rangle\left\langle a_{i}\right|
+$$</p>
+<ul>
+<li>例如：
+$$
+\begin{array}{l}
+\hat{P}<em>{+}=|z+\rangle\langle z+|=\left(\begin{array}{l}
+1 \
+0
+\end{array}\right)\left(\begin{array}{ll}
+1 &amp; 0
+\end{array}\right)=\left(\begin{array}{ll}
+1 &amp; 0 \
+0 &amp; 0
+\end{array}\right), \quad \hat{P}</em>{-}=\left(\begin{array}{ll}
+0 &amp; 0 \
+0 &amp; 1
+\end{array}\right)\
+\Rightarrow\hat{S}<em>{z}=\frac{\hbar}{2} \hat{P}</em>{+}+\left(-\frac{\hbar}{2}\right) \hat{P}<em>{-}=\left(\begin{array}{cc}
+\hbar / 2 &amp; 0 \
+0 &amp; -\hbar / 2
+\end{array}\right)=\frac{\hbar}{2}\left(\begin{array}{cc}
+1 &amp; 0 \
+0 &amp; -1
+\end{array}\right) \equiv \frac{\hbar}{2} \hat{\sigma}</em>{z}
+\end{array}
+$$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>对易关系：
+$$
+[A, B] \equiv A B-B A
+$$</p>
+<ul>
+<li>$$
+[A, B] =0\Leftrightarrow对易；[A, B] \ne 0\Leftrightarrow不对易
+$$</li>
+<li>自旋算符不对易且交换子具有循环对称性：
+$$
+\left[\hat{S}<em>{x/y/z}, \hat{S}</em>{y/z/x}\right]=i \hbar \hat{S}_{z/x/y}
+$$</li>
+</ul>
+</li>
+</ul>
+<h4 id="量子测量的期望值和误差">量子测量的期望值和误差</h4>
+<ul>
+<li>期望值：
+$$
+\begin{aligned}
+\langle\hat{A}\rangle &amp;=\sum_{i} P_{i} a_{i} \
+&amp;=\sum_{i}\left|c_{i}\right|^{2} a_{i} \
+&amp;=\sum_{i}c_{i}^*c_{i} a_{i} \
+&amp;=\sum_{i}\left\langle\psi \mid a_{i}\right\rangle\left\langle a_{i} \mid \psi\right\rangle a_{i} \
+&amp;=\left\langle\psi\left|\left(\sum_{i} a_{i}\left|a_{i}\right\rangle\left\langle a_{i}\right|\right)\right| \psi\right\rangle \
+&amp;=\langle\psi|\hat{A}| \psi\rangle
+\end{aligned}
+$$</li>
+<li>误差：
+$$
+\begin{aligned}
+\left\langle{\Delta \hat{A}}^{2}\right\rangle &amp;=\sum_{i} P_{i}\left(\Delta a_{i}\right)^{2} \
+&amp;=\left\langle(\hat{A}-\langle \hat{A}\rangle)^{2}\right\rangle \
+&amp;=\left\langle\hat{A}^{2}\right\rangle-2\langle\hat{A}\rangle\langle\hat{A}\rangle+\langle\hat{A}\rangle^{2} \
+&amp;=\left\langle\hat{A}^{2}\right\rangle-\langle\hat{A}\rangle^{2}
+\end{aligned}
+$$</li>
+</ul>
+<h4 id="可兼容测量">可兼容测量</h4>
+<ul>
+<li>
+<p>$$
+[\hat{A}, \hat{B}]=0 \Leftrightarrow \hat{A}, \hat{B} \text { 为可兼容物理量 }
+$$</p>
+</li>
+<li>
+<p>定理：若
+$$
+\hat{A}, \hat{B}
+$$</p>
+<p>可兼容，则具有共同的本征基矢
+$$
+{|a, b\rangle}
+$$</p>
+</li>
+</ul>
+<p>证明：*F. Mandl 《Quantum Mechanics》 3.1 节</p>
+<ul>
+<li>
+<p>意义：
+$$
+\hat{A}|a, b\rangle=a|a, b\rangle, \quad \hat{B}|a, b\rangle=b|a, b\rangle
+$$</p>
+<p>，可满足串联/平行测量</p>
+</li>
+</ul>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 182; 
+			flex-basis: 437px"
+	>
+	<a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnFJ1s4muJHcIf0ZUww7tUFd.png" data-size="592x325">
+		<img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnFJ1s4muJHcIf0ZUww7tUFd.png"
+			width="592"
+			height="325"
+			srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnFJ1s4muJHcIf0ZUww7tUFd_hu3771558a2af9f5d91659a702017924ef_45682_480x0_resize_box_3.png 480w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnFJ1s4muJHcIf0ZUww7tUFd_hu3771558a2af9f5d91659a702017924ef_45682_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h4 id="不可兼容测量">不可兼容测量</h4>
+<ul>
+<li>原理：<!-- raw HTML omitted -->海森堡测不准原理<!-- raw HTML omitted --></li>
+<li>串联/平行测量产生不确定性</li>
+</ul>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 203; 
+			flex-basis: 488px"
+	>
+	<a href="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnY2i6rzrV8PBSNuZOhLtx1D.png" data-size="659x324">
+		<img src="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnY2i6rzrV8PBSNuZOhLtx1D.png"
+			width="659"
+			height="324"
+			srcset="/p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnY2i6rzrV8PBSNuZOhLtx1D_hu254adc64b7002411142efb8a9e11e46c_42758_480x0_resize_box_3.png 480w, /p/%E7%B2%BE%E5%8D%8E-%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6%E6%8A%80%E6%9C%AF-01%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%AC%E7%90%86%E5%81%87%E8%AE%BE/static/boxcnY2i6rzrV8PBSNuZOhLtx1D_hu254adc64b7002411142efb8a9e11e46c_42758_1024x0_resize_box_3.png 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h4 id="海森堡测不准关系">海森堡测不准关系</h4>
+<ul>
+<li>
+<p><!-- raw HTML omitted -->海森堡不等式：<!-- raw HTML omitted -->
+$$
+\left\langle\Delta {\hat{A}}^{2}\right\rangle_{\psi}\left\langle\Delta {\hat{B}}^{2}\right\rangle_{\psi} \geq \frac{1}{4}\left|\langle[\hat{A}, \hat{B}]\rangle_{\psi}\right|^{2}
+$$</p>
+</li>
+<li>
+<p>回顾误差计算公式：
+$$
+\left\langle{\Delta \hat{A}}^{2}\right\rangle =\left\langle{\hat{A}}^{2}\right\rangle-\langle\hat{A}\rangle^{2}
+$$</p>
+<p>，
+$$
+\Delta \hat{A} \equiv \hat{A}-\langle\hat{A}\rangle
+$$</p>
+</li>
+<li>
+<p>回顾厄米算符：
+$$
+A^{\dagger}=A
+$$</p>
+<p>，可观测，本征值、期望值为实数；反厄米算符：
+$$
+A^{\dagger}=-A
+$$</p>
+<p>，不可观测，本征值、期望值为虚数</p>
+</li>
+<li>
+<p>对易算符为反厄米算符：设为
+$$
+\hat{A},\hat{B}
+$$</p>
+<p>厄米算符，则
+$$
+([\hat{A}, \hat{B}])^{\dagger}=(\hat{A} \hat{B}-\hat{B} \hat{A})^{\dagger}=\hat{B} \hat{A}-\hat{A} \hat{B}=-[\hat{A}, \hat{B}]
+$$</p>
+</li>
+<li>
+<p>证明推导：</p>
+</li>
+</ul>
+<p>设厄米算符
+$$
+\hat{A},\hat{B}
+$$</p>
+<p><!-- raw HTML omitted -->不一定对易<!-- raw HTML omitted -->，定义算符
+$$
+\hat{O}=\Delta \hat{A}-i \lambda \Delta \hat{B},\lambda \in \mathbb{R} 
+$$</p>
+<p>则
+$$
+[\Delta \hat{A}, \Delta \hat{B}]=[\hat{A}, \hat{B}]
+$$</p>
+<p>$$
+\forall |\psi\rangle$$，设$$|\beta\rangle=\hat{O}|\psi\rangle$$，则向量长度$$\langle\beta \mid \beta\rangle \geq 0
+$$</p>
+<p>$$
+\Rightarrow \left\langle\psi\left|\hat{O}^{\dagger} \hat{O}\right| \psi\right\rangle \geq 0 \
+$$</p>
+<p>$$
+\Rightarrow \left\langle\psi\left|\left(\Delta \hat{A}^{\dagger}+i \lambda \Delta \hat{B}^{\dagger}\right)(\Delta \hat{A}-i \lambda \Delta \hat{B})\right| \psi\right\rangle \geq 0
+$$</p>
+<p>考虑厄米算符性质</p>
+<p>$$
+\Rightarrow \left\langle\Delta \hat{A}^{2}\right\rangle_{\psi}-i \lambda\langle[\Delta \hat{A}, \Delta \hat{B}]\rangle_{\psi}+\lambda^{2}\left\langle\Delta \hat{B}^{2}\right\rangle_{\psi} \geq 0
+$$</p>
+<p>考虑关于
+$$
+\lambda
+$$</p>
+<p>的二次函数开口向上且非负，则有 0 或 1 个零点，使用判别式</p>
+<p>$$
+\Rightarrow \left|\langle[\Delta \hat{A}, \Delta \hat{B}]\rangle_{\psi}\right|^{2}-4\left\langle\Delta \hat{A}^{2}\right\rangle_{\psi}\left\langle\Delta \hat{B}^{2}\right\rangle_{\psi} \leq 0
+$$</p>
+<p>$$
+\Rightarrow \left\langle\Delta \hat{A}^{2}\right\rangle_{\psi}\left\langle\Delta \hat{B}^{2}\right\rangle_{\psi} \geq \frac{1}{4}\left|\langle[\Delta \hat{A}, \Delta \hat{B}]\rangle_{\psi}\right|^{2}=\frac{1}{4}\left|\langle[\hat{A}, \hat{B}]\rangle_{\psi}\right|^{2}
+$$</p>
+<p>Q.E.D</p>
+<ul>
+<li>案例：S-G 实验</li>
+</ul>
+<p>已知
+$$
+\left[\hat{S}<em>{x}, \hat{S}</em>{y}\right]=i \hbar \hat{S}<em>{z},\left[\hat{S}</em>{y}, \hat{S}<em>{z}\right]=i \hbar \hat{S}</em>{x},\left[\hat{S}<em>{z}, \hat{S}</em>{x}\right]=i \hbar \hat{S}_{y}
+$$</p>
+<p>不对易</p>
+<p>对于量子态
+$$
+|\psi\rangle=|z+\rangle
+$$</p>
+<p>，
+$$
+\hat{S}_{z}|z+\rangle=\frac{\hbar}{2}|z+\rangle
+$$</p>
+<p>则
+$$
+\left\langle\Delta {\hat{S}<em>{x}}^{2}\right\rangle</em>{\psi}\left\langle\Delta {\hat{S}<em>{y}}^{2}\right\rangle</em>{\psi} \geq \frac{\hbar^{4}}{16}
+$$</p>
+<p>进一步，
+$$
+\left\langle\Delta {\hat{S}<em>{x}}^{2}\right\rangle</em>{\psi}=\left\langle\Delta {\hat{S}<em>{y}}^{2}\right\rangle</em>{\psi}=\frac{\hbar^{2}}{4}
+$$</p>
+<h4 id="经典力学-vs-量子力学">经典力学 vs 量子力学</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>经典力学</th>
+<th>量子力学</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>运动状态</td>
+<td>动量</td>
+<td></td>
+</tr>
+<tr>
+<td>$$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>p$$、位置</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$$</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>x$$ | 希尔伯特空间中的一个向量 $$                                                      |
+| 可观测量     | 动量
+$$
+p$$、位置
+$$</p>
+<p>x$$ | 矩阵算符，如动量算符
+$$
+\hat{p}
+$$</p>
+<p>、位置算符
+$$
+\hat{x}
+$$</p>
+<p>、自旋算符
+$$
+\vec{n} \cdot \hat{\sigma}
+$$
+|
+| 观测结果     | 动量
+$$
+p$$、位置
+$$</p>
+<p>x$$ | 矩阵算符的本征值                                                                 |
+| 观测的确定性 | 确定             | 不确定，几率                                                                     |</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>本文转载自微信（WeChat）订阅号<a class="link" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=Mzg2ODU4ODkxMA=="  target="_blank" rel="noopener"
+    >因物悦理</a>。&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/quantumoptics/">QuantumOptics</a>
+        
+            <a href="/tags/theory/">Theory</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><strong>CC BY-NC-SA 4.0</strong></a></span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/%E5%8E%9F%E7%90%86-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9B%E7%BB%B4%E7%9F%A2%E9%87%8F%E8%BD%AC%E8%BD%BD/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8E%9F%E7%90%86-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9B%E7%BB%B4%E7%9F%A2%E9%87%8F%E8%BD%AC%E8%BD%BD/head.5707dfefc7abd91e1262301cda8b3e86_hu84d46cc68f6bdc9568a71e5b3ac426f4_145301_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【原理】 什么是四维矢量？（转载）"
+                        
+                        data-hash="md5-Vwff78er2R4SYjAc2os&#43;hg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【原理】 什么是四维矢量？（转载）</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E5%8E%9F%E7%90%86-%E4%BB%80%E4%B9%88%E6%98%AF%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E8%BD%AC%E8%BD%BD/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8E%9F%E7%90%86-%E4%BB%80%E4%B9%88%E6%98%AF%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E8%BD%AC%E8%BD%BD/head.63e538a4d5b4c1cdaffe109d4242c322_hu2605f795eb15edc402106083c042a856_79462_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【原理】 什么是量子力学？（转载）"
+                        
+                        data-hash="md5-Y&#43;U4pNW0wc2v/hCdQkLDIg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【原理】 什么是量子力学？（转载）</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/">
+        
+        
+            <div class="article-image">
+                <img src="/p/theory-spherical-waves-under-paraxial-and-far-field-conditions/head.9242124f4af63615fc54e9ef167bae12_hu17f660a78cb128465ae5e41856f74baf_43927_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post [Theory] Spherical Waves under Paraxial and Far-Field Conditions"
+                        
+                        data-hash="md5-kkIST0r2NhX8VOnvFnuuEg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Theory] Spherical Waves under Paraxial and Far-Field Conditions</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/hello-fang-meta/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hello-fang-meta/head.6e5829e81fd5ebe1e471e2455c8608f9_hua123e606f4f538c12cdc66e570bbf274_223151_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hello! FANG META!"
+                        
+                        data-hash="md5-blgp6B/V6&#43;HkceJFXIYI&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hello! FANG META!</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    .waline-container .vcount {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    new Waline({"avatar":"retro","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"lang":"zh-CN","locale":{"admin":"Admin"},"requiredMeta":["name","email","url"],"visitor":true});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+		</script>
+		
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		
+			
+		
+		
+		
+		
+		
+		<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Hits in Total
+	</section>
+	
+    <section class="copyright">
+		
+        &copy; 
+        
+            2022 - 
+        
+        2023 FANG META!
+		All Rights Reserved
+    </section>
+    
+	<section class="powerby">
+        
+            Other men live to eat, while I eat to live. —— Socrates <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#相关课程资料">相关课程资料：</a></li>
+    <li><a href="#课堂重点">课堂重点</a>
+      <ol>
+        <li><a href="#21-量子力学理论的数学基础">2.1 量子力学理论的数学基础</a></li>
+        <li><a href="#22-施特恩-格拉赫strong实验strong">2.2 施特恩-格拉赫<!-- raw HTML omitted -->实验<!-- raw HTML omitted --></a></li>
+        <li><a href="#23-量子力学的公理假设">2.3 量子力学的公理假设</a>
+          <ol>
+            <li><a href="#量子测量的期望值和误差">量子测量的期望值和误差</a></li>
+            <li><a href="#可兼容测量">可兼容测量</a></li>
+            <li><a href="#不可兼容测量">不可兼容测量</a></li>
+            <li><a href="#海森堡测不准关系">海森堡测不准关系</a></li>
+            <li><a href="#经典力学-vs-量子力学">经典力学 vs 量子力学</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
