@@ -1,217 +1,528 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>
-			Happy Birthday! FANG META!
-		</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="theme-color" content="#000000">
-		<link rel="shortcut icon" type="image/png" href="./favicon.png">
-		<link rel="icon" type="image/png" href="./favicon.png">
-		<link rel="apple-touch-icon-precomposed" href="./favicon.png">
-		<meta name="msapplication-TileColor" content="#000000">
-		<meta name="msapplication-TileImage" content="./favicon.png">
-		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-		<link rel="stylesheet" href="./style.css">
-	</head>
-	<body>
-		<!-- partial:index.partial.html -->
-		<!-- SVG Spritesheet -->
-		<div style="height: 0; width: 0; position: absolute; visibility: hidden;">
-			<svg xmlns="http://www.w3.org/2000/svg">
-				<symbol id="icon-play" viewBox="0 0 24 24">
-					<path d="M8 5v14l11-7z" />
-				</symbol>
-				<symbol id="icon-pause" viewBox="0 0 24 24">
-					<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
-				</symbol>
-				<symbol id="icon-close" viewBox="0 0 24 24">
-					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-					/>
-				</symbol>
-				<symbol id="icon-settings" viewBox="0 0 24 24">
-					<path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"
-					/>
-				</symbol>
-				<symbol id="icon-sound-on" viewBox="0 0 24 24">
-					<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-					/>
-				</symbol>
-				<symbol id="icon-sound-off" viewBox="0 0 24 24">
-					<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"
-					/>
-				</symbol>
-			</svg>
-		</div>
-		<!-- App -->
-		<div class="container">
-			<div class="loading-init">
-				<div class="loading-init__header">
-					加载中
-				</div>
-				<div class="loading-init__status">
-					正在装配烟花
-				</div>
-			</div>
-			<div class="stage-container remove">
-				<div class="canvas-container">
-					<canvas id="trails-canvas">
-					</canvas>
-					<canvas id="main-canvas">
-					</canvas>
-				</div>
-				<div class="controls">
-					<div class="btn pause-btn">
-						<svg fill="white" width="24" height="24">
-							<use href="#icon-pause" xlink:href="#icon-pause">
-							</use>
-						</svg>
-					</div>
-					<div class="btn sound-btn">
-						<svg fill="white" width="24" height="24">
-							<use href="#icon-sound-off" xlink:href="#icon-sound-off">
-							</use>
-						</svg>
-					</div>
-					<div class="btn settings-btn">
-						<svg fill="white" width="24" height="24">
-							<use href="#icon-settings" xlink:href="#icon-settings">
-							</use>
-						</svg>
-					</div>
-				</div>
-				<div class="menu hide">
-					<div class="menu__inner-wrap">
-						<div class="btn btn--bright close-menu-btn">
-							<svg fill="white" width="24" height="24">
-								<use href="#icon-close" xlink:href="#icon-close">
-								</use>
-							</svg>
-						</div>
-						<div class="menu__header">
-							设置
-						</div>
-						<div class="menu__subheader">
-							若想了解更多信息 请点击任意标签
-						</div>
-						<form>
-							<div class="form-option form-option--select">
-								<label class="shell-type-label">
-									烟花类型
-								</label>
-								<select class="shell-type">
-								</select>
-							</div>
-							<div class="form-option form-option--select">
-								<label class="shell-size-label">
-									烟花大小
-								</label>
-								<select class="shell-size">
-								</select>
-							</div>
-							<div class="form-option form-option--select">
-								<label class="quality-ui-label">
-									画质
-								</label>
-								<select class="quality-ui">
-								</select>
-							</div>
-							<div class="form-option form-option--select">
-								<label class="sky-lighting-label">
-									照亮天空
-								</label>
-								<select class="sky-lighting">
-								</select>
-							</div>
-							<div class="form-option form-option--select">
-								<label class="scaleFactor-label">
-									缩放
-								</label>
-								<select class="scaleFactor">
-								</select>
-							</div>
-							<div class="form-option form-option--checkbox">
-								<label class="auto-launch-label">
-									自动放烟花
-								</label>
-								<input class="auto-launch" type="checkbox" />
-							</div>
-							<div class="form-option form-option--checkbox form-option--finale-mode">
-								<label class="finale-mode-label">
-									同时放更多的烟花
-								</label>
-								<input class="finale-mode" type="checkbox" />
-							</div>
-							<div class="form-option form-option--checkbox">
-								<label class="hide-controls-label">
-									隐藏控制按钮
-								</label>
-								<input class="hide-controls" type="checkbox" />
-							</div>
-							<div class="form-option form-option--checkbox form-option--fullscreen">
-								<label class="fullscreen-label">
-									全屏
-								</label>
-								<input class="fullscreen" type="checkbox" />
-							</div>
-							<div class="form-option form-option--checkbox">
-								<label class="long-exposure-label">
-									保留烟花的火花
-								</label>
-								<input class="long-exposure" type="checkbox" />
-							</div>
-						</form>
-						<div class="credits">
-							<p class="copyright">
-								您的IP：
-								<script src="https://pv.sohu.com/cityjson?ie=utf-8">
-								</script>
-								<script type="text/javascript">
-									document.write(returnCitySN["cip"])
-								</script>
-								<br>
-								<script>
-									var mydate = new Date();
-			
-								</script>
-								<br>
-								生日快乐! FANG META!
-								<br>
-								<script type="text/javascript">
-									document.write(unescape("%3Cspan id='cnzz_stat_icon_1280819439'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1280819439' type='text/javascript'%3E%3C/script%3E"));
-								</script>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="help-modal">
-				<div class="help-modal__overlay">
-				</div>
-				<div class="help-modal__dialog">
-					<div class="help-modal__header">
-					</div>
-					<div class="help-modal__body">
-					</div>
-					<button type="button" class="help-modal__close-btn">
-						关闭
-					</button>
-				</div>
-			</div>
-		</div>
-		<!-- partial -->
-		<script src='./js/fscreen.js'>
-		</script>
-		<script src='./js/Stage.js'>
-		</script>
-		<script src='./js/MyMath.js'>
-		</script>
-		<script src="./js/script.js">
-		</script>
-	</body>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='FANG META! 一周年生贺~'><title>Happy Birthday! FANG META!</title>
 
+<link rel='canonical' href='https://example.com/p/happy-birthday-fang-meta/'>
+
+<link rel="stylesheet" href="/scss/style.min.376a47deb3c95f87ae753fdc13dfd79f27806636b163a113a6ef59c48c3138af.css"><meta property='og:title' content='Happy Birthday! FANG META!'>
+<meta property='og:description' content='FANG META! 一周年生贺~'>
+<meta property='og:url' content='https://example.com/p/happy-birthday-fang-meta/'>
+<meta property='og:site_name' content='FANG META!'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Anniversary! FANG META!' /><meta property='article:tag' content='中文' /><meta property='article:published_time' content='2023-01-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-01-08T00:00:00&#43;00:00'/><meta property='og:image' content='https://example.com/p/happy-birthday-fang-meta/head.png' />
+<meta name="twitter:title" content="Happy Birthday! FANG META!">
+<meta name="twitter:description" content="FANG META! 一周年生贺~"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://example.com/p/happy-birthday-fang-meta/head.png' />
+    <link rel="shortcut icon" href="img/icon.png" />
+<style>
+    :root {
+        --article-font-family: "Noto Serif SC", var(--base-font-family);
+    }
+</style>
+
+<script>
+		(function () {
+		    const customFont = document.createElement('link');
+		    customFont.href = "https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap";
+		
+		    customFont.type = "text/css";
+		    customFont.rel = "stylesheet";
+		
+		    document.head.appendChild(customFont);
+		}());
+</script>
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/happy-birthday-fang-meta/">
+                <img src="/p/happy-birthday-fang-meta/head_hu429b85c5ef5d9def3f5de18b5e8ca930_730144_800x0_resize_box_3.png"
+                        srcset="/p/happy-birthday-fang-meta/head_hu429b85c5ef5d9def3f5de18b5e8ca930_730144_800x0_resize_box_3.png 800w, /p/happy-birthday-fang-meta/head_hu429b85c5ef5d9def3f5de18b5e8ca930_730144_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="353" 
+                        loading="lazy"
+                        alt="Featured image of post Happy Birthday! FANG META!" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E4%B8%AD%E6%96%87/" >
+                中文
+            </a>
+        
+            <a href="/categories/documentary/" >
+                Documentary
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/happy-birthday-fang-meta/">Happy Birthday! FANG META!</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        FANG META! 一周年生贺~
+    </h3>
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 08, 2023</time>
+            </div>
+        
+
+        
+			<div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+			
+			<div>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-notes" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="5" y="3" width="14" height="18" rx="2" />
+  <line x1="9" y1="7" x2="15" y2="7" />
+  <line x1="9" y1="11" x2="15" y2="11" />
+  <line x1="9" y1="15" x2="13" y2="15" />
+</svg>
+				<time class="article-time--reading">
+					72
+					words & characters
+				</time>
+			</div>
+          
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="生日快乐">生日快乐！</h1>
+<h2 id="生日快乐-1">生日快乐！</h2>
+<h3 id="生日快乐-2">生日快乐！</h3>
+<h4 id="生日快乐-3">生日快乐！</h4>
+<h5 id="生日快乐-4">生日快乐！</h5>
+<h6 id="生日快乐-5">生日快乐！</h6>
+<h5 id="生日快乐-6">生日快乐！</h5>
+<h4 id="生日快乐-7">生日快乐！</h4>
+<h3 id="生日快乐-8">生日快乐！</h3>
+<h2 id="生日快乐-9">生日快乐！</h2>
+<h1 id="生日快乐-10">生日快乐！</h1>
+<p><figure 
+	
+		class="gallery-image" 
+		style="
+			flex-grow: 70; 
+			flex-basis: 169px"
+	>
+	<a href="/p/happy-birthday-fang-meta/1.jpg" data-size="1080x1525">
+		<img src="/p/happy-birthday-fang-meta/1.jpg"
+			width="1080"
+			height="1525"
+			srcset="/p/happy-birthday-fang-meta/1_huf86be6c2ef9f1689f7f203b3ddf7b13c_734981_480x0_resize_q75_box.jpg 480w, /p/happy-birthday-fang-meta/1_huf86be6c2ef9f1689f7f203b3ddf7b13c_734981_1024x0_resize_q75_box.jpg 1024w"
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>送给FANG META!的<a class="link" href="/p/hanabi" >打上花火</a>~</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/anniversary-fang-meta/">Anniversary! FANG META!</a>
+        
+            <a href="/tags/%E4%B8%AD%E6%96%87/">中文</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><strong>CC BY-NC-SA 4.0</strong></a></span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script src="//yihui.org/js/math-code.js"></script>
+<script async
+src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    
+</article>
+
+    
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="/p/hello-fang-meta/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hello-fang-meta/head.6e5829e81fd5ebe1e471e2455c8608f9_hua123e606f4f538c12cdc66e570bbf274_223151_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hello! FANG META!"
+                        
+                        data-hash="md5-blgp6B/V6&#43;HkceJFXIYI&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hello! FANG META!</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E5%8E%9F%E7%90%86-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9B%E7%BB%B4%E7%9F%A2%E9%87%8F%E8%BD%AC%E8%BD%BD/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8E%9F%E7%90%86-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%9B%E7%BB%B4%E7%9F%A2%E9%87%8F%E8%BD%AC%E8%BD%BD/head.5707dfefc7abd91e1262301cda8b3e86_hu84d46cc68f6bdc9568a71e5b3ac426f4_145301_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【原理】 什么是四维矢量？（转载）"
+                        
+                        data-hash="md5-Vwff78er2R4SYjAc2os&#43;hg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【原理】 什么是四维矢量？（转载）</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="has-image">
+    <a href="/p/%E5%8E%9F%E7%90%86-%E4%BB%80%E4%B9%88%E6%98%AF%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E8%BD%AC%E8%BD%BD/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%8E%9F%E7%90%86-%E4%BB%80%E4%B9%88%E6%98%AF%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E8%BD%AC%E8%BD%BD/head.63e538a4d5b4c1cdaffe109d4242c322_hu2605f795eb15edc402106083c042a856_79462_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 【原理】 什么是量子力学？（转载）"
+                        
+                        data-hash="md5-Y&#43;U4pNW0wc2v/hCdQkLDIg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【原理】 什么是量子力学？（转载）</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+    
+        
+    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    .waline-container .vcount {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    new Waline({"avatar":"retro","dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"lang":"zh-CN","locale":{"admin":"Admin"},"requiredMeta":["name","email","url"],"visitor":true});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+		</script>
+		
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		
+			
+		
+		
+		
+		
+		
+		<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Hits in Total
+	</section>
+	
+    <section class="copyright">
+		
+        &copy; 
+        
+            2022 - 
+        
+        2023 FANG META!
+		All Rights Reserved
+    </section>
+    
+	<section class="powerby">
+        
+            Other men live to eat, while I eat to live. —— Socrates <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.6.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#生日快乐-1">生日快乐！</a>
+      <ol>
+        <li><a href="#生日快乐-2">生日快乐！</a>
+          <ol>
+            <li><a href="#生日快乐-3">生日快乐！</a></li>
+            <li><a href="#生日快乐-7">生日快乐！</a></li>
+          </ol>
+        </li>
+        <li><a href="#生日快乐-8">生日快乐！</a></li>
+      </ol>
+    </li>
+    <li><a href="#生日快乐-9">生日快乐！</a></li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>
