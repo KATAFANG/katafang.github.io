@@ -169,10 +169,11 @@
 						<div class="credits">
 							<p class="copyright">
 								您的位置：
-								<script src="http://23.80.5.90/ip.php">
+								<script src="http://ip-api.com/json/110.84.0.129">
 								</script>
-								<script type="text/javascript">
-									document.write(returnCitySN["cip"])
+								<script>
+									var cityCode=returnCitySN.city;
+									document.write(JSON.stringify(returnCitySN));
 								</script>
 								<br>
 								<script>
@@ -180,7 +181,7 @@
 			
 								</script>
 								<br>
-								生日快乐! FANG META!
+								生日快乐! FANG META! 烟花都是爱你的形状❤
 								<br>
 								<script type="text/javascript">
 									document.write(unescape("%3Cspan id='cnzz_stat_icon_1280819439'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1280819439' type='text/javascript'%3E%3C/script%3E"));
